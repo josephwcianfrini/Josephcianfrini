@@ -90,7 +90,35 @@
                     </div>
 
                     <!-- SEO Pillars Grid -->
-                    <div class="pillars-grid">
+                    <div class="pillars-grid pillars-grid-extended">
+                        <!-- Google Business Profile Pillar -->
+                        <div class="pillar-card glass-effect">
+                            <div class="pillar-header">
+                                <div class="pillar-icon gmb-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                        <polyline points="9 22 9 12 15 12 15 22"/>
+                                    </svg>
+                                </div>
+                                <h4>Google Business</h4>
+                                <span class="pillar-score" id="gmb-score">--</span>
+                            </div>
+                            <div class="pillar-metrics">
+                                <div class="metric">
+                                    <span class="metric-label">Profile Complete</span>
+                                    <span class="metric-value" id="profile-complete">--</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Reviews</span>
+                                    <span class="metric-value" id="review-count">--</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Average Rating</span>
+                                    <span class="metric-value" id="avg-rating">--</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Authority Pillar -->
                         <div class="pillar-card glass-effect">
                             <div class="pillar-header">
@@ -208,15 +236,56 @@
                     <!-- Detailed Analysis Tabs -->
                     <div class="details-section glass-effect">
                         <div class="tabs">
-                            <button class="tab active" data-tab="keywords">Keywords & Meta</button>
+                            <button class="tab active" data-tab="recommendations">Recommendations</button>
+                            <button class="tab" data-tab="google-business">Google Business</button>
+                            <button class="tab" data-tab="keywords">Keywords & Meta</button>
                             <button class="tab" data-tab="backlinks">Backlinks</button>
                             <button class="tab" data-tab="technical">Technical</button>
                             <button class="tab" data-tab="content">Content</button>
                         </div>
 
                         <div class="tab-content">
+                            <!-- Recommendations Tab -->
+                            <div class="tab-panel active" id="recommendations-panel">
+                                <div class="recommendations-container" id="recommendations-list">
+                                    <div class="loading-placeholder">Generating recommendations...</div>
+                                </div>
+                            </div>
+
+                            <!-- Google Business Tab -->
+                            <div class="tab-panel" id="google-business-panel">
+                                <div class="detail-grid">
+                                    <div class="detail-section">
+                                        <h5>Profile Status</h5>
+                                        <div class="detail-list" id="gbp-profile-list">
+                                            <div class="loading-placeholder">Analyzing...</div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h5>Reviews & Ratings</h5>
+                                        <div class="detail-list" id="gbp-reviews-list">
+                                            <div class="loading-placeholder">Analyzing...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail-grid">
+                                    <div class="detail-section">
+                                        <h5>Photos & Media</h5>
+                                        <div class="detail-list" id="gbp-photos-list">
+                                            <div class="loading-placeholder">Analyzing...</div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h5>Engagement</h5>
+                                        <div class="detail-list" id="gbp-engagement-list">
+                                            <div class="loading-placeholder">Analyzing...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Keywords & Meta Tab -->
-                            <div class="tab-panel active" id="keywords-panel">
+                            <div class="tab-panel" id="keywords-panel">
                                 <div class="detail-grid">
                                     <div class="detail-section">
                                         <h5>Meta Tags Analysis</h5>
@@ -294,8 +363,8 @@
                                         </div>
                                     </div>
                                     <div class="detail-section">
-                                        <h5>Recommendations</h5>
-                                        <div class="detail-list" id="recommendations-list">
+                                        <h5>Content Quality Metrics</h5>
+                                        <div class="detail-list" id="content-quality-list">
                                             <div class="loading-placeholder">Analyzing...</div>
                                         </div>
                                     </div>
